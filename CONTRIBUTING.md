@@ -156,10 +156,10 @@ install_npm_tool "prettier"
 ### What NOT to Include
 
 - **Multi-distro support**: This is Ubuntu-only
-- **Font installations**: Keep fonts out of this project
-- **Profile-based filtering**: No work/personal profile logic
 - **Proprietary tools**: Only open-source or freely available tools
 - **Experimental/unstable tools**: Prefer stable releases
+- **Font installations**: Fonts should be managed separately
+- **Desktop environments**: No DE-specific configurations (Hyprland, GNOME tweaks, etc.)
 
 ### Questions?
 
