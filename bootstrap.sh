@@ -24,8 +24,6 @@ section_tools=(
   ./scripts/tools/awscli.sh
   ./scripts/tools/postgresql.sh
   ./scripts/tools/github_cli.sh
-  ./scripts/tools/ripgrep.sh
-  ./scripts/tools/lazygit.sh
   ./scripts/tools/cloc.sh
   ./scripts/tools/claude.sh
   ./scripts/tools/btop.sh

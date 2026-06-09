@@ -21,7 +21,7 @@ An automated bootstrap script for setting up Ubuntu development environments wit
 
 ### Development Tools
 - **Version Managers**: pyenv, tfenv
-- **CLI Tools**: GitHub CLI, Ripgrep, Lazygit, Cloc, Claude CLI, Btop
+- **CLI Tools**: GitHub CLI, Cloc, Claude CLI, Btop
 - **Infrastructure**: Docker, Terraform, AWS CLI
 - **Database**: PostgreSQL client
 
@@ -117,8 +117,6 @@ The `scripts/_helpers.sh` file provides utility functions:
 - `get_git_release_version(repo)` - Get latest release version
 - `install_pip_tool(name)` - Install Python tools via pipx
 - `install_npm_tool(name)` - Install Node tools globally
-- `install_go_tool(repo, [binary_name])` - Install Go tools
-- `install_cargo_tool(name, [binary_name])` - Install Rust tools
 
 ## Safety
 

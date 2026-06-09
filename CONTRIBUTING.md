@@ -56,8 +56,6 @@ fi
 # - download_git_release_file()
 # - install_pip_tool()
 # - install_npm_tool()
-# - install_go_tool()
-# - install_cargo_tool()
 
 echo "Installed <tool-name>"
 ```
@@ -153,12 +151,6 @@ install_pip_tool "black"
 
 # Install Node.js tool globally
 install_npm_tool "prettier"
-
-# Install Go tool
-install_go_tool "github.com/user/tool@latest" "binary-name"
-
-# Install Rust tool via cargo
-install_cargo_tool "ripgrep" "rg"
 ```
 
 ### What NOT to Include

@@ -22,21 +22,21 @@ Open-source Ubuntu bootstrap script for automated development environment setup.
 - Python (with pip, pipx, venv)
 - Node.js
 
-### Development Tools (12 scripts)
+### Development Tools (9 scripts)
 - Version managers: pyenv, tfenv
 - Containers: Docker
 - Cloud: AWS CLI
-- Databases: PostgreSQL client, Terraform
-- CLI tools: GitHub CLI, Ripgrep, Lazygit, Cloc, Claude CLI, Btop
+- Databases: PostgreSQL client
+- CLI tools: GitHub CLI, Cloc, Claude CLI, Btop
 
 ### Python Tools (4 scripts)
 - uv, hatch, ruff, tldr
 
-### Desktop Applications (11 scripts)
+### Desktop Applications (10 scripts)
 - Chrome, VSCode, Slack, Remmina, MPV, LibreOffice
 - OBS Studio, Krita, PGAdmin, Partition Manager
 
-**Total: 32 installation scripts**
+**Total: 29 installation scripts**
 
 ## Commands
 
@@ -65,14 +65,29 @@ ubuntu-bootstrap/
 ├── CONTRIBUTING.md          # Contribution guidelines
 ├── LICENSE                  # MIT License
 └── scripts/
-    ├── _helpers.sh          # Utility functions
+    ├── _helpers.sh          # Utility functions (133 lines)
     ├── config.sh            # System configuration
     ├── core_packages.sh     # Essential packages
     ├── run_updates.sh       # OS updates
     ├── languages/           # Programming languages
-    ├── tools/               # Development tools
-    └── programs/            # Desktop applications
+    ├── tools/               # Development tools (9 scripts)
+    └── programs/            # Desktop applications (10 scripts)
 ```
+
+## Helper Functions
+
+Only includes functions that are actually used:
+- `download_file()` - Download files with caching
+- `download_git_release_file()` - Download from GitHub releases
+- `get_git_release_version()` - Get latest release version
+- `install_pip_tool()` - Install Python tools via pipx
+- `install_npm_tool()` - Install Node tools globally
+
+Removed unused functions:
+- `install_go_tool()` (no Go tools)
+- `install_cargo_tool()` (no Rust tools)
+- `install_dotnet_tool()` (no .NET tools)
+- `install_dotnet_template()` (no .NET tools)
 
 ## Design Principles
 
@@ -80,7 +95,8 @@ ubuntu-bootstrap/
 2. **Safe**: Idempotent scripts with error handling
 3. **Clear**: Descriptive output and comments
 4. **Ubuntu-focused**: No OS detection or multi-distro logic
-5. **Open**: MIT licensed, contribution-friendly
+5. **Lean**: Only helper functions that are actually used
+6. **Open**: MIT licensed, contribution-friendly
 
 ## Removed from Original
 
@@ -89,6 +105,8 @@ ubuntu-bootstrap/
 - Fedora support (all `.fedora.sh` files)
 - Font installation
 - Hyprland/NVIDIA setup
+- Go/Rust/C++/Lua tools (lazygit, ripgrep, etc.)
+- Unused helper functions
 - 150+ tools not in scope
 
 ## Ready for
